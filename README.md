@@ -1,2 +1,170 @@
 # Java
 It will contain code as well as project in java.
+
+
+# My Notes;
+
+main class - Java Programme starts running from here.
+Resultant of Data Type after arithmetic operation.
+double(if any one is double), float(if any one is float in the absence of double), int(if float and double are not present)
+
+Associativity tells the direction of the execution of operators. It can either be left to right or vice versa.
+
+/, * -> L to R
++, - -> L to R
+++, = -> R to L
+
+a++ -> first use the value and then increment.
+++a -> first increment the value then use it.
+
+Widening Casting: automatic type casting (from small to big data type): byte -> short -> char -> int -> long -> float -> double
+
+Narrowing Casting: manually typecast(from big to small data type):
+double x = 9.76d;
+int a = (int) x
+
+but, You can't convert int to string or vice versa.
+String e = 4;
+int x = e;
+
+bitwise operators &(and), |(or), ^(xor)(If the bits are different, the resulting bit is 1. If they are the same, the result is 0), >>(right shift), and <<(left shift).
+
+&& 	Logical and (Return true if both statement are true).
+|| 	Logical or
+!	Logical not
+
+if (condition1) {
+  // block of code to be executed if condition1 is true
+} else if (condition2) {
+  // block of code to be executed if the condition1 is false and condition2 is true
+} else {
+  // block of code to be executed if the condition1 is false and condition2 is false
+}
+
+Shorthand:
+variable = (condition) ? expression1 : expression2;
+(number > 0) ? "Positive" : ((number < 0) ? "Negative" : "Zero");
+
+Switch:
+switch(expression) {
+  case x:
+    // code block
+    break;
+  case y:
+    // code block
+    break;
+  default:
+    // code block
+}
+break keyword, it breaks out of the switch block.
+default statement is used as the last statement, it does not need a break.
+
+
+While loop:
+while (condition) {
+  // code block to be executed
+  // increament i++ here
+}
+
+
+do-while loop will always be executed at least once, even if the condition is false, because the code block is executed before the condition is tested.
+do {
+  // code block to be executed
+  // increament i++ here
+}
+while (condition);
+
+
+for (statement 1; statement 2; statement 3) {
+  // code block to be executed
+}
+Statement 1 is executed (one time) before the execution of the code block.
+Statement 2 defines the condition for executing the code block.
+Statement 3 is executed (every time) after the code block has been executed.
+
+
+Nested for loop:
+// Outer loop
+for (int i = 1; i <= 2; i++) {
+  System.out.println("Outer: " + i); // Executes 2 times
+  
+// Inner loop
+for (int j = 1; j <= 3; j++) {
+    System.out.println(" Inner: " + j); // Executes 6 times (2 * 3)
+  }
+} 
+
+
+For Each Loop:
+"for-each" loop, which is used exclusively to loop through elements in an array. It outputs all elements in the array.
+
+for (type variableName : arrayName) {
+  // code block to be executed
+}
+
+Labeled for loop;
+public class LabeledForLoopExample {
+    public static void main(String[] args) {
+        outerLoop: // Label for the outer loop
+        for (int i = 1; i <= 3; i++) {
+            innerLoop: // Label for the inner loop
+            for (int j = 1; j <= 3; j++) {
+                System.out.println("i = " + i + ", j = " + j);
+                if (i == 2 && j == 2) {
+                    // Breaks out of the outer loop when i = 2 and j = 2
+                    break outerLoop;
+                }
+            }
+        }
+    }
+}
+
+
+The break statement can also be used to jump out of a loop.
+The continue statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.
+
+
+Array:
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+System.out.println(cars.length);
+
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+for (int i = 0; i < cars.length; i++) {
+  System.out.println(cars[i]);
+}
+
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+for (String i : cars) {
+  System.out.println(i);
+}
+
+Mutidimensional array:
+int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+myNumbers[1][2] = 9;
+System.out.println(myNumbers[1][2]); // Outputs 9 instead of 7
+
+public class Main {
+  public static void main(String[] args) {
+    int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+    for (int i = 0; i < myNumbers.length; ++i) {
+      for(int j = 0; j < myNumbers[i].length; ++j) {
+        System.out.println(myNumbers[i][j]);
+      }
+    }
+  }
+}
+
+
+
+
+We can't make object of abstract class.
+We can make abstract and concrete class from the abstract class.
+
+Abstract class v/s interface:
+multiple inheritence can we use using interface not abstract class.
+
+
+
+
+
+
