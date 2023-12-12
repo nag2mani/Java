@@ -314,4 +314,31 @@ import java.lang.Math;
 
 
 
+class Int_bin{
+    public static void main(String[] args){
+        ArrayList<Integer> ar = new ArrayList<>();
+        HashMap<Integer, Integer> hm = new HashMap<>();
+        ar.add(52);
+        ar.add(22);
+        ar.add(452);
+        ar.add(5256);
+        for(int i : ar){
+            int store = i;
+            int sum = 0;
+
+            while (i > 0) {
+                sum = sum + i % 10;
+                i = i/10;
+            }
+
+            hm.put(store, sum);
+            sum = 0;
+        }
+        System.out.println(ar);
+        System.out.println(hm);
+    }
+}
+
+
+
 
