@@ -2,8 +2,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 import java.lang.Math;
+import java.io.File;
+import java.io.IOException;
 
-// public class Int_bin {
+// public class Sem_3_Practice {
 // public static void main(String[] args) {
 // int num = 8;
 // ArrayList <Integer> ar = new ArrayList<>();
@@ -18,7 +20,7 @@ import java.lang.Math;
 // }
 // }
 
-// public class Int_bin {
+// public class Sem_3_Practice {
 // public static void main(String[] args) {
 // int num = 10010;
 // int j = 0;
@@ -33,7 +35,7 @@ import java.lang.Math;
 // }
 // }
 
-// public class Int_bin {
+// public class Sem_3_Practice {
 // public static void main(String[] args) {
 // int start = 2;
 // int end = 100;
@@ -54,7 +56,7 @@ import java.lang.Math;
 // }
 // }
 
-// public class Int_bin {
+// public class Sem_3_Practice {
 // public static void main(String[] args) {
 // int original_num = 153;
 // int num = original_num;
@@ -73,7 +75,7 @@ import java.lang.Math;
 // }
 // }
 
-// class Int_bin {
+// class Sem_3_Practice {
 // public static void main(String[] args) {
 // ArrayList<Integer> myList = new ArrayList<Integer>();
 // int mult=0;
@@ -154,7 +156,7 @@ import java.lang.Math;
 // }
 // }
 
-// class Int_bin {
+// class Sem_3_Practice {
 // public static void main(String[] args) {
 // int a = 1, b = 2;
 // char c1 = 'd', c2 = 'a';
@@ -171,7 +173,7 @@ import java.lang.Math;
 // }
 // }
 
-// class Int_bin {
+// class Sem_3_Practice {
 //     public static void main(String[] args) {
 //         int x = 2, y = 3, c = 0, d = 1;
 //         for (int a = x; a < y * 2; a++) {
@@ -184,7 +186,7 @@ import java.lang.Math;
 //     }
 // }
 
-// class Int_bin {
+// class Sem_3_Practice {
 //     public static void main(String[] args) {
 //         int a = 1;
 //         int b = 5;
@@ -199,7 +201,7 @@ import java.lang.Math;
 //     }
 // }
 
-// class Int_bin {
+// class Sem_3_Practice {
 //     public static void main(String[] args) {
 //             int a=1, b=5;
 //             for(int i=a; i<=b; i++){
@@ -211,7 +213,7 @@ import java.lang.Math;
 //         }
 // }
 
-// class Int_bin {
+// class Sem_3_Practice {
 //     public static void main(String[] args) {
 //         int a = 1, b = 25, c = 0, res = 0;
 //         for (int i = a; i <= b; i++) {
@@ -234,7 +236,7 @@ import java.lang.Math;
 //     }
 // }
 
-// class Int_bin {
+// class Sem_3_Practice {
 //     public static void main(String[] args) {
 //         ArrayList<String> al = new ArrayList<String>();
 //         ArrayList<String> al2 = new ArrayList<String>();
@@ -255,7 +257,7 @@ import java.lang.Math;
 //     }
 // }
 
-// class Int_bin {
+// class Sem_3_Practice {
 //     public static void main(String[] args) {
 //         ArrayList<Integer> al = new ArrayList<Integer>();
 //         GCD g = new GCD();
@@ -293,8 +295,7 @@ import java.lang.Math;
 //     }
 // }
 
-
-// class Int_bin {
+// class Sem_3_Practice {
 //     public static void main(String[] args) {
 //         HashMap<Character, Integer> hm = new HashMap<Character, Integer>();
 //         String s = "The weather is nice.";
@@ -312,33 +313,43 @@ import java.lang.Math;
 //     }
 // }
 
+// class Sem_3_Practice{
+//     public static void main(String[] args){
+//         ArrayList<Integer> ar = new ArrayList<>();
+//         HashMap<Integer, Integer> hm = new HashMap<>();
+//         ar.add(52);
+//         ar.add(22);
+//         ar.add(452);
+//         ar.add(5256);
+//         for(int i : ar){
+//             int store = i;
+//             int sum = 0;
 
+//             while (i > 0) {
+//                 sum = sum + i % 10;
+//                 i = i/10;
+//             }
 
-class Int_bin{
-    public static void main(String[] args){
-        ArrayList<Integer> ar = new ArrayList<>();
-        HashMap<Integer, Integer> hm = new HashMap<>();
-        ar.add(52);
-        ar.add(22);
-        ar.add(452);
-        ar.add(5256);
-        for(int i : ar){
-            int store = i;
-            int sum = 0;
+//             hm.put(store, sum);
+//             sum = 0;
+//         }
+//         System.out.println(ar);
+//         System.out.println(hm);
+//     }
+// }
 
-            while (i > 0) {
-                sum = sum + i % 10;
-                i = i/10;
-            }
-
-            hm.put(store, sum);
-            sum = 0;
+public class Sem_3_Practice {
+    public static void main(String args[]) throws IOException {
+        File text = new File("C:\\Users\\Aman\\Desktop\\Pintu\\Java\\Week_11\\EH2.txt");
+        Scanner scnr = new Scanner(text);
+        int count = 0;
+        // Reading each line of the file using Scanner class
+        while (scnr.hasNextLine()) {
+            count++;
+            String line = scnr.nextLine().trim();
+            String[] wordArray = line.split(" ");
+            int numWords = wordArray.length;
+            System.out.println("Total number of words in line " + count + " is: " + numWords);
         }
-        System.out.println(ar);
-        System.out.println(hm);
     }
 }
-
-
-
-
