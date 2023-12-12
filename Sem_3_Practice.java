@@ -340,7 +340,7 @@ import java.io.IOException;
 
 public class Sem_3_Practice {
     public static void main(String args[]) throws IOException {
-        File text = new File("C:\\Users\\Aman\\Desktop\\Pintu\\Java\\Week_11\\EH2.txt");
+        File text = new File("output.txt");
         Scanner scnr = new Scanner(text);
         int count = 0;
         // Reading each line of the file using Scanner class
@@ -351,5 +351,10 @@ public class Sem_3_Practice {
             int numWords = wordArray.length;
             System.out.println("Total number of words in line " + count + " is: " + numWords);
         }
+        scnr.close();
     }
 }
+
+
+
+
