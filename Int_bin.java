@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 import java.lang.Math;
 
@@ -254,7 +255,6 @@ import java.lang.Math;
 //     }
 // }
 
-
 // class Int_bin {
 //     public static void main(String[] args) {
 //         ArrayList<Integer> al = new ArrayList<Integer>();
@@ -293,4 +293,21 @@ import java.lang.Math;
 //     }
 // }
 
+class Int_bin {
+    public static void main(String[] args) {
+        HashMap<Character, Integer> hm = new HashMap<Character, Integer>();
+        String s = "The weather is nice.";
+        s = s.replace(" ", "");
+        for (int i = 0; i <= s.length() - 1; i++) {
+            if (hm.containsKey(s.charAt(i))) {
+                hm.put(s.charAt(i), hm.get(s.charAt(i)) + 1);
+            } else {
+                hm.put(s.charAt(i), 1);
+            }
+        }
+        for (char c : hm.keySet()) {
+            System.out.println("The number of occurrence of the character " + c + " is = " + hm.get(c));
+        }
+    }
+}
 
