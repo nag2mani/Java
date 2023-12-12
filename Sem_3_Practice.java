@@ -338,23 +338,48 @@ import java.io.IOException;
 //     }
 // }
 
-public class Sem_3_Practice {
-    public static void main(String args[]) throws IOException {
-        File text = new File("output.txt");
-        Scanner scnr = new Scanner(text);
-        int count = 0;
-        // Reading each line of the file using Scanner class
-        while (scnr.hasNextLine()) {
-            count++;
-            String line = scnr.nextLine().trim();
-            String[] wordArray = line.split(" ");
-            int numWords = wordArray.length;
-            System.out.println("Total number of words in line " + count + " is: " + numWords);
-        }
-        scnr.close();
-    }
-}
+// public class Sem_3_Practice {
+//     public static void main(String args[]) throws IOException {
+//         File text = new File("output.txt");
+//         Scanner scnr = new Scanner(text);
+//         int count = 0;
+//         // Reading each line of the file using Scanner class
+//         while (scnr.hasNextLine()) {
+//             count++;
+//             String line = scnr.nextLine().trim();
+//             String[] wordArray = line.split(" ");
+//             int numWords = wordArray.length;
+//             System.out.println("Total number of words in line " + count + " is: " + numWords);
+//         }
+//         scnr.close();
+//     }
+// }
 
 
-
-
+// public class Sem_3_Practice {
+//     public static void main(String args[]) throws IOException {
+//         File text = new File("output.txt");
+//         Scanner scnr = new Scanner(text);
+//         int count = 0;
+//         ArrayList<String> al = new ArrayList<String>();
+//         al.add("a");
+//         al.add("an");
+//         al.add("the");
+//         String newString = "";
+//         while (scnr.hasNextLine()) {
+//             count++;
+//             String line = scnr.nextLine().trim();
+//             String[] wordArray = line.split(" ");
+//             for (String word : wordArray) {
+//                 if (!al.contains(word)) {
+//                     newString = newString + word + " ";
+//                 }
+//             }
+//             System.out.println("Line " + count + " : " + line);
+//             System.out.println("Line without articles: " + newString);
+//             System.out.println();
+//             newString = "";
+//         }
+//         scnr.close();
+//     }
+// }
