@@ -255,41 +255,41 @@ import java.lang.Math;
 // }
 
 
-class Int_bin {
-    public static void main(String[] args) {
-        ArrayList<Integer> al = new ArrayList<Integer>();
-        GCD g = new GCD();
-        al.add(6);
-        al.add(12);
-        al.add(2);
-        al.add(20);
-        al.add(42);
-        int i = 0, minGCD = 1, gcd = 1, n1 = 1, n2 = 1;
-        while (i < al.size() - 1) {
-            if (i == 0) {
-                n1 = al.get(i);
-                n2 = al.get(i + 1);
-            } else {
-                n1 = gcd;
-                n2 = al.get(i + 1);
-            }
-            gcd = g.findGCD(n1, n2);
-            i++;
-        }
-        System.out.println("GCD is " + gcd);
-    }
-}
+// class Int_bin {
+//     public static void main(String[] args) {
+//         ArrayList<Integer> al = new ArrayList<Integer>();
+//         GCD g = new GCD();
+//         al.add(6);
+//         al.add(12);
+//         al.add(2);
+//         al.add(20);
+//         al.add(42);
+//         int i = 0, minGCD = 1, gcd = 1, n1 = 1, n2 = 1;
+//         while (i < al.size() - 1) {
+//             if (i == 0) {
+//                 n1 = al.get(i);
+//                 n2 = al.get(i + 1);
+//             } else {
+//                 n1 = gcd;
+//                 n2 = al.get(i + 1);
+//             }
+//             gcd = g.findGCD(n1, n2);
+//             i++;
+//         }
+//         System.out.println("GCD is " + gcd);
+//     }
+// }
 
-class GCD {
-    int findGCD(int a, int b) {
-        int gcd = 1;
-        int max = 1;
-        int small = a > b ? b : a;
-        for (int i = 1; i <= small; i++) {
-            if (a % i == 0 && b % i == 0) {
-                gcd = i;
-            }
-        }
-        return gcd;
-    }
-}
+// class GCD {
+//     int findGCD(int a, int b) {
+//         int gcd = 1;
+//         int small = a > b ? b : a;
+//         for (int i = 1; i <= small; i++) {
+//             if (a % i == 0 && b % i == 0) {
+//                 gcd = i;
+//             }
+//         }
+//         return gcd;
+//     }
+// }
+
