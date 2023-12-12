@@ -1,5 +1,5 @@
 # Java
-It will contain code as well as project in java.
+It contains code as well as project related to java.
 
 
 # My Notes;
