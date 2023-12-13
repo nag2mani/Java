@@ -1,12 +1,3 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.TreeMap;
-import java.util.Comparator;
-import java.util.*;
-
-
-
 // public class IA_02_String {
 //    public static void main(String[] args) {
 //        int marks = 80;
@@ -230,33 +221,33 @@ import java.util.*;
 
 
 
-class IA_02_String {
-   public static void main(String args[]) {
-       HashMap<Integer, String> hm = new HashMap<Integer, String>();
-       hm.put(100, "Amit");
-       hm.put(101, "Vijay");
-       hm.put(102, "Rahul");
-       System.out.println("Initial list of elements:");
-       for (int i : hm.keySet()) {
-           System.out.println(i + " " + hm.get(i));
-       }
-       System.out.println("Updated list of elements:");
-       hm.replace(102, "Gaurav");
-       for (int i : hm.keySet()) {
-           System.out.println(i + " " + hm.get(i));
-       }
-       System.out.println("Updated list of elements:");
-       hm.replace(101, "Vijay", "Ravi");
-       for (int i : hm.keySet()) {
-           System.out.println(i + " " + hm.get(i));
-       }
-       System.out.println("Updated list of elements:");
-       hm.replaceAll((k, v) -> "Ajay");
-       for (int i : hm.keySet()) {
-           System.out.println(i + " " + hm.get(i));
-       }
-   }
-}
+// class IA_02_String {
+//    public static void main(String args[]) {
+//        HashMap<Integer, String> hm = new HashMap<Integer, String>();
+//        hm.put(100, "Amit");
+//        hm.put(101, "Vijay");
+//        hm.put(102, "Rahul");
+//        System.out.println("Initial list of elements:");
+//        for (int i : hm.keySet()) {
+//            System.out.println(i + " " + hm.get(i));
+//        }
+//        System.out.println("Updated list of elements:");
+//        hm.replace(102, "Gaurav");
+//        for (int i : hm.keySet()) {
+//            System.out.println(i + " " + hm.get(i));
+//        }
+//        System.out.println("Updated list of elements:");
+//        hm.replace(101, "Vijay", "Ravi");
+//        for (int i : hm.keySet()) {
+//            System.out.println(i + " " + hm.get(i));
+//        }
+//        System.out.println("Updated list of elements:");
+//        hm.replaceAll((k, v) -> "Ajay");
+//        for (int i : hm.keySet()) {
+//            System.out.println(i + " " + hm.get(i));
+//        }
+//    }
+// }
 
 
 //class HashMapExample2{
@@ -334,15 +325,15 @@ class IA_02_String {
 //    }
 //}
 
-class PyramidExample2 {
-    public static void main(String[] args) {
-        int term=6;
-        for(int i=1;i<=term;i++){
-            for(int j=term;j>=i;j--){
-                System.out.print(j);
-//                System.out.print("* ");
-            }
-            System.out.println();//new line
-        }
-    }
-}
+// class PyramidExample2 {
+//     public static void main(String[] args) {
+//         int term=6;
+//         for(int i=1;i<=term;i++){
+//             for(int j=term;j>=i;j--){
+//                 System.out.print(j);
+// //                System.out.print("* ");
+//             }
+//             System.out.println();//new line
+//         }
+//     }
+// }
