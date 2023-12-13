@@ -449,5 +449,21 @@ import java.io.IOException;
 //     }
 // }
 
-
-
+// class Sem_3_Practice {
+//     public static void main(String[] args) {
+//         String s = "university";
+//         int len = s.length();
+//         int count = 0;
+//         int i = 0;
+//         while (len > 0) {
+//             for (int j = 0; j <= count; j++) {
+//                 System.out.print(s.charAt(i));
+//                 i++;
+//                 len--;
+//             }
+//             count++;
+//             System.out.println();
+            
+//         }
+//     }
+// }
