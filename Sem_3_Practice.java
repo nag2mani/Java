@@ -355,7 +355,6 @@ import java.io.IOException;
 //     }
 // }
 
-
 // public class Sem_3_Practice {
 //     public static void main(String args[]) throws IOException {
 //         File text = new File("output.txt");
@@ -384,21 +383,71 @@ import java.io.IOException;
 //     }
 // }
 
+// class Sem_3_Practice{
+//     public static void main(String[] args){
+//         int j, k, l;
+//         for (int i =1 ; i<= 5; i++){
+//             for (j=1; j<=i;j++){
+//                 System.out.print(j+"@");
+//             }
+//             for (k=1; k<j;k++){
+//                 System.out.print(j-1 +"&");
+//             }
+//             for (l=j-2; l>=1;l--){
+//                 System.out.print(l+"#");
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
 
-class Sem_3_Practice{
-    public static void main(String[] args){
-        int j, k, l;
-        for (int i =1 ; i<= 5; i++){
-            for (j=1; j<=i;j++){
-                System.out.print(j+"@");
-            }
-            for (k=1; k<j;k++){
-                System.out.print(j-1 +"&");
-            }
-            for (l=j-2; l>=1;l--){
-                System.out.print(l+"#");
-            }
-            System.out.println();
-        }
-    }
-}
+// class Sem_3_Practice {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         Pyramid p = new Pyramid();
+//         System.out.println("Enter a number to form a pyramid: ");
+//         int n = sc.nextInt();
+//         System.out.println("Enter what kind of pyramid you want: type 1 for traditional or 2for reversed");
+//         int i = sc.nextInt();
+//         // System.out.println("Option entered is: "+i);
+//         if (i == 1) {
+//             p.tradPyramid(n);
+//         } else if (i == 2) {
+//             p.revPyramid(n);
+//         } else {
+//             System.out.println("Invalid input");
+//         }
+//         sc.close();
+//     }
+// }
+
+// class Pyramid {
+//     void tradPyramid(int x) {
+//         System.out.println("Traditional pyramid is as follows: \n");
+//         for (int i = 1; i <= x; i++) {
+//             for (int j = 1; j <= x - i; j++) {
+//                 System.out.print(" ");
+//             }
+//             for (int k = 1; k <= 2 * i - 1; k++) {
+//                 System.out.print("*");
+//             }
+//             System.out.println();
+//         }
+//     }
+
+//     void revPyramid(int y) {
+//         System.out.println("Reverse pyramid is as follows: \n");
+//         for (int i = 1; i <= y; i++) {
+//             for (int j = 1; j <= i - 1; j++) {
+//                 System.out.print(" ");
+//             }
+//             for (int k = 1; k <= i; k++) {
+//                 System.out.print("*");
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+
+
+
