@@ -468,40 +468,40 @@ import java.io.IOException;
 //     }
 // }
 
-public class Sem_3_Practice {
-    public static void main(String[] args) {
-        // This represents the row with the max stars
-        int numberOfRows;
-        System.out.println("Enter the number of rows: ");
-        // Getting the number of rows from user
-        Scanner sc = new Scanner(System.in);
-        numberOfRows = sc.nextInt();
+// public class Sem_3_Practice {
+//     public static void main(String[] args) {
+//         // This represents the row with the max stars
+//         int numberOfRows;
+//         System.out.println("Enter the number of rows: ");
+//         // Getting the number of rows from user
+//         Scanner sc = new Scanner(System.in);
+//         numberOfRows = sc.nextInt();
 
-        for (int i = 1; i <= numberOfRows; i++) {
-            // Prints the spaces before the first star of each row
-            for (int j = i; j < numberOfRows; j++) {
-                System.out.print(" ");
-            }
-            // Prints the stars for each row
-            for (int k = 1; k <= i; k++) {
-                System.out.print("*");
-            }
-            System.out.println();
-        }
+//         for (int i = 1; i <= numberOfRows; i++) {
+//             // Prints the spaces before the first star of each row
+//             for (int j = i; j < numberOfRows; j++) {
+//                 System.out.print(" ");
+//             }
+//             // Prints the stars for each row
+//             for (int k = 1; k <= i; k++) {
+//                 System.out.print("*");
+//             }
+//             System.out.println();
+//         }
 
 
 
-        for (int i = numberOfRows; i >= 1; i--) {
-            // Prints the whitespaces before the first star of each row
-            for (int j = i; j <= numberOfRows; j++) {
-                System.out.print(" ");
-            }
-            // Prints stars of each row
-            for (int k = 1; k < i; k++) {
-                System.out.print("*");
-            }
-            System.out.println();
-        }
-    }
-}
+//         for (int i = numberOfRows; i >= 1; i--) {
+//             // Prints the whitespaces before the first star of each row
+//             for (int j = i; j <= numberOfRows; j++) {
+//                 System.out.print(" ");
+//             }
+//             // Prints stars of each row
+//             for (int k = 1; k < i; k++) {
+//                 System.out.print("*");
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
 
