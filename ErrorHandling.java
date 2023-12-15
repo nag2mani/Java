@@ -1,5 +1,3 @@
-import java.io.*;
-
 public class ErrorHandling {
   public static void main(String[] args) {
     int a = 5;
