@@ -30,11 +30,7 @@ public class FileHandling {
             FileReader fr = new FileReader("output.txt");
             int i;
             while ((i = fr.read()) != -1) {
-                if (Character.toLowerCase(i) == "a" ||)
 
-                }
-
-            }
             fr.close();
         }
 
@@ -44,6 +40,7 @@ public class FileHandling {
             // e.printStackTrace();
         }
     }
+}
 }
 
 
