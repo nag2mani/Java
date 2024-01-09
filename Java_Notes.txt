@@ -155,15 +155,50 @@ To convert int to string in java;
 String strNumber = String.valueOf(number);
 
 
-We can access instance variables through object references, and static variables
-can be accessed directly using the class name.
-
+We can access instance variables through object references, and 
+static variables can be accessed directly using the class name.
 
 We can't make object of abstract class.
 We can make abstract and concrete class from the abstract class.
 
 Abstract class v/s interface:
 multiple inheritence can we use using interface not abstract class.
+
+
+
+
+Semester 4;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
