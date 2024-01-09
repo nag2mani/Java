@@ -3,10 +3,11 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
+
 public class Directory_Reading {
 
     public static void main(String[] args) {
-        String directoryPath = "your/directory/path"; // Specify your directory path here
+        String directoryPath = "C:\\Users\\nag2m\\coding\\java\\code\\Java";
         iterateFiles(directoryPath);
     }
 
@@ -56,3 +57,4 @@ public class Directory_Reading {
         return wordCount;
     }
 }
+
