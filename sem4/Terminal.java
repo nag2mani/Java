@@ -1,6 +1,26 @@
+// // IF you run this code, after compiling this code "java Terminal nagmanieeeeeee". It will print "nagmanieeeeeee".
+
+// class Terminal{
+//     public static void main(String[] args) {
+//         System.out.println(args[0]);
+//     }
+// }
+
+
+
+
 class Terminal{
     public static void main(String[] args) {
-        System.out.println(args[0]);
+        if(args.length > 0){
+            System.out.println("This is commmand line argument");
+
+            for (String val : args){
+                System.out.println(val);
+            }
+        }
+        else{
+            System.out.println("No commmand line found");
+        }
     }
 }
 
