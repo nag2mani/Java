@@ -7,8 +7,7 @@
 // }
 
 
-
-
+//If your arg length is zero then it will print content in the else case. 
 class Terminal{
     public static void main(String[] args) {
         if(args.length > 0){
