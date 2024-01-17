@@ -24,7 +24,7 @@ public class PlindromeLeapyear {
             if (i%100 == 0){
                 if (i % 400 == 0){
                     // then it is leap year.
-                    for i
+                    // for i
                 }
             }
 
