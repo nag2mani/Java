@@ -7,7 +7,7 @@ import java.io.IOException;
 public class Directory_Reading {
 
     public static void main(String[] args) {
-        String directoryPath = "C:\\Users\\nag2m\\coding\\java\\code\\Java";
+        String directoryPath = "../data";
         iterateFiles(directoryPath);
     }
 
@@ -31,6 +31,7 @@ public class Directory_Reading {
                 if (file.isFile()) {
                     System.out.println("Full Path: " + file.getAbsolutePath());
                     System.out.println("File Name: " + file.getName());
+                    System.out.print("Content of File: ");
                     System.out.println("Number of Words: " + countWords(file));
                     System.out.println("------------------------");
                 }
@@ -47,6 +48,7 @@ public class Directory_Reading {
             String line;
 
             while ((line = reader.readLine()) != null) {
+                System.out.println(line);
                 String[] words = line.split("\\s+");
                 wordCount += words.length;
             }
