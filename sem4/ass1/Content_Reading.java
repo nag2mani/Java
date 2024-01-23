@@ -1,95 +1,146 @@
-package ass1;
+// package ass1;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.HashMap;
+import java.util.Map;
 
 public class Content_Reading {
 
     public static void main(String[] args) {
         if (args.length < 2) {
-            System.out.println("");
-            System.exit(1);
+            System.out.println("Usage: java Content_Reading <directory_path> <stopword1> <stopword2> ...");
+            return;
         }
 
-        String directoryPath = args[0];
+        String directoryPath = "../data";
         String[] stopwords = new String[args.length - 1];
-        System.arraycopy(args, 1, stopwords, 0, args.length - 1);
+        System.arraycopy(args, 1, stopwords, 0, stopwords.length);
 
-        // Call methods and  analyze files
-        analyzeFiles(directoryPath, stopwords);
+        iterateFiles(directoryPath, stopwords);
     }
 
-    private static void analyzeFiles(String directoryPath, String[] stopwords) {
+    private static void iterateFiles(String directoryPath, String[] stopwords) {
         File directory = new File(directoryPath);
+
+        if (!directory.exists()) {
+            System.out.println("Directory not found!");
+            return;
+        }
+
+        if (!directory.isDirectory()) {
+            System.out.println("Provided path is not a directory!");
+            return;
+        }
+
         File[] files = directory.listFiles();
 
-        if (files == null) {
-            System.out.println("Invalid directory path.");
-            System.exit(1);
-        }
+        if (files != null) {
+            int totalFiles = 0;
 
-        int totalFiles = files.length;
-        System.out.println("1) Total number of files: " + totalFiles);
+            for (File file : files) {
+                if (file.isFile()) {
+                    totalFiles++;
 
-        for (File file : files) {
-            if (file.isFile()) {
-                analyzeFile(file, stopwords);
+                    System.out.println("Full Path: " + file.getAbsolutePath());
+                    System.out.println("File Name: " + file.getName());
+                    displayFileContent(file);
+                    System.out.println("Number of Words: " + countWords(file));
+                    displayWordFrequency(file, stopwords);
+                    displayFileContentWithoutStopwords(file, stopwords);
+                    System.out.println("------------------------");
+                }
             }
+
+            System.out.println("Total Number of Files: " + totalFiles);
+        } else {
+            System.out.println("Error reading directory contents.");
         }
     }
 
-    private static void analyzeFile(File file, String[] stopwords) {
+    private static void displayFileContent(File file) {
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
             String line;
-            StringBuilder content = new StringBuilder();
-            int wordCount = 0;
-            HashMap<String, Integer> wordFrequency = new HashMap<>();
+
+            System.out.println("Content of File:");
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+        } catch (IOException e) {
+            System.out.println("Error reading file: " + file.getName());
+        }
+    }
+
+    private static int countWords(File file) {
+        int wordCount = 0;
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+            String line;
 
             while ((line = reader.readLine()) != null) {
-                content.append(line).append("\n");
-
-                // Count words and word frequency
                 String[] words = line.split("\\s+");
+                wordCount += words.length;
+            }
+        } catch (IOException e) {
+            System.out.println("Error reading file: " + file.getName());
+        }
+
+        return wordCount;
+    }
+
+    private static void displayWordFrequency(File file, String[] stopwords) {
+        Map<String, Integer> wordFrequency = new HashMap<>();
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+            String line;
+
+            while ((line = reader.readLine()) != null) {
+                String[] words = line.split("\\s+");
+
                 for (String word : words) {
-                    word = word.toLowerCase().replaceAll("[^a-zA-Z]", "");
-                    if (!word.isEmpty() && !isStopword(word, stopwords)) {
-                        wordCount++;
+                    if (!isStopword(word, stopwords)) {
                         wordFrequency.put(word, wordFrequency.getOrDefault(word, 0) + 1);
                     }
                 }
             }
+        } catch (IOException e) {
+            System.out.println("Error reading file: " + file.getName());
+        }
 
-            // Display file content and word count
-            System.out.println("\nFile: " + file.getName());
-            System.out.println("2) Content:\n" + content.toString());
-            System.out.println("   Total number of words: " + wordCount);
-
-            // Display word frequency
-            System.out.println("3) Word Frequency:");
-            for (String word : wordFrequency.keySet()) {
-                System.out.println("   " + word + ": " + wordFrequency.get(word));
-            }
-
-            // Display content after removing stopwords
-            System.out.println("4) Content after removing stopwords:");
-            String contentWithoutStopwords = content.toString();
-            for (String stopword : stopwords) {
-                contentWithoutStopwords = contentWithoutStopwords.replaceAll("\\b" + stopword + "\\b", "");
-            }
-            System.out.println(contentWithoutStopwords);
-
-        } catch (Exception e) {
-            e.printStackTrace();
+        System.out.println("Word Frequency:");
+        for (Map.Entry<String, Integer> entry : wordFrequency.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
         }
     }
 
     private static boolean isStopword(String word, String[] stopwords) {
         for (String stopword : stopwords) {
-            if (stopword.equalsIgnoreCase(word)) {
+            if (word.equalsIgnoreCase(stopword)) {
                 return true;
             }
         }
         return false;
+    }
+
+    private static void displayFileContentWithoutStopwords(File file, String[] stopwords) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+            String line;
+
+            System.out.println("Content without Stopwords:");
+            while ((line = reader.readLine()) != null) {
+                String[] words = line.split("\\s+");
+
+                for (String word : words) {
+                    if (!isStopword(word, stopwords)) {
+                        System.out.print(word + " ");
+                    }
+                }
+                System.out.println();
+            }
+        } catch (IOException e) {
+            System.out.println("Error reading file: " + file.getName());
+        }
     }
 }
