@@ -15,7 +15,7 @@ public class Content_Reading {
             return;
         }
 
-        String directoryPath = "../data";
+        String directoryPath = "./data";
         String[] stopwords = new String[args.length - 1];
         System.arraycopy(args, 1, stopwords, 0, stopwords.length);
 
@@ -50,7 +50,9 @@ public class Content_Reading {
                     System.out.println("Number of Words: " + countWords(file));
                     displayWordFrequency(file, stopwords);
                     displayFileContentWithoutStopwords(file, stopwords);
-                    System.out.println("------------------------");
+                    System.out.println();
+                    System.out.println("-------------------------------------------------------------------------------");
+                    System.out.println();
                 }
             }
 
