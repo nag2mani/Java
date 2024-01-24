@@ -1,5 +1,5 @@
 # package ass1;
-
+#shell
 #!/bin.sh
 
 # Define variables
