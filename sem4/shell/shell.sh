@@ -1,16 +1,23 @@
 # Shell Scripting
 
-# sleep 5 #This will make a delay of 10 seconds.
+
+
+# echo "Enter Your Name on command line"
+# read p
+# echo "Hello $p"
+
+
+
+# #This will make a delay of 5 seconds.
+# sleep 5
 # w1=Hello
-# w2="kfk"
-# # echo $w1 $w2
-# echo $w1
-# echo Nagmani
+# w2=Nagmani
+# echo $w1 $w2
 
 
 
 # start=$(date +%s)
-# # start=$(date +%s%3N), or 6N 
+# # start=$(date +%s%3N) for answer in miliseconds.
 # var=Hello
 # name=Nagmani
 # sleep 5
@@ -23,6 +30,7 @@
 
 
 
+# #If-Else condition;
 # m=2
 # n=2
 # if [ $n -eq $m ]
@@ -44,19 +52,18 @@
 
 
 
-# a = 5
+# a=5
 # while [ $a -lt 10 ]
 # do
 # echo $a
-# a=`expr $a + 1 `
+# a=`expr $a + 1`
 # done
 
 
-# for i in 1 2 3 4 5 6 7 8
 
+# max=10
+# for i in `seq 1 $max`
+# do
+# echo "$i"
+# done
 
-max=10
-for i in `seq 1 $max`
-do
-echo "$i"
-done
