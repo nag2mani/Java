@@ -1,9 +1,8 @@
 package Data_Structures;
 
-class LinkedList {
 
+public class LinkedList {
     Node head;
-
     class Node {
         int data;
         Node next;
