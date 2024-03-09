@@ -4,12 +4,14 @@ package Sorting;
 
 public class QuickSort {
 
+
     //Swapping of two elements.
     public static void Swap(int[] arr, int j, int i) {
         int var = arr[j];
         arr[j] = arr[i];
         arr[i] = var;
     }
+
 
     //Quicksort
     public static int[] quicksort(int[] arr, int s, int e) {
@@ -22,6 +24,7 @@ public class QuickSort {
         return arr;
     }
 
+    
     //partition function.
     public static int partition(int[] arr, int s, int e) {
         int pivot = arr[e];

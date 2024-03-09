@@ -13,6 +13,7 @@ public class MergeSort {
         return new int[]{arr[low]};
     }
 
+
     //Merging two array;
     public static int[] merge(int[] left, int[] right) {
         int result[] = new int[left.length + right.length];
@@ -37,6 +38,7 @@ public class MergeSort {
         return result;
     }
 
+    
     //Printing sorted array
     static void printArray(int[] arr) {
         int n = arr.length;

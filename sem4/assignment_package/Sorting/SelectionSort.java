@@ -3,6 +3,7 @@ package Sorting;
 
 public class SelectionSort {
 
+    
     //selection sort algorithm.
     public static int[] selection_sort(int[] arr){
         for (int i = 0; i < arr.length; i++) {
