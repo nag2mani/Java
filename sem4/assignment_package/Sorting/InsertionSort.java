@@ -1,44 +1,24 @@
 package Sorting;
 
 public class InsertionSort {
-    void insert(int a[])
 
-    {
-        int i, j, temp;
-        int n = a.length;
-        for (i = 1; i < n; i++) {
-            temp = a[i];
-            j = i - 1;
-
-            while (j >= 0 && temp <= a[j])
-            /*
-             * Move the elements greater than temp to one position ahead from their current
-             * position
-             */
-            {
-                a[j + 1] = a[j];
-                j = j - 1;
+    // insertion sort algorithm.
+    public static int[] insertion_sort(int[] arr) {
+        for (int i = 1; i < arr.length; i++) {
+            int temp = arr[i];
+            int j = i - 1;
+            while (j >= 0 && arr[j] > temp) {
+                Swap(arr, j, j + 1);
+                j -= 1;
             }
-            a[j + 1] = temp;
         }
+        return arr;
     }
 
-    void printArr(int a[]) {
-
-        int i;
-        int n = a.length;
-        for (i = 0; i < n; i++)
-            System.out.print(a[i] + " ");
-    }
-
-    public static void main(String[] args) {
-        int a[] = { 92, 50, 5, 20, 11, 22 };
-        InsertionSort i1 = new InsertionSort();
-        System.out.println("\nBefore sorting array elements are - ");
-        i1.printArr(a);
-        i1.insert(a);
-        System.out.println("\n\nAfter sorting array elements are - ");
-        i1.printArr(a);
-        System.out.println();
+    //swapping algorithm.
+    public static void Swap(int[] arr, int j, int i) {
+        int var = arr[j];
+        arr[j] = arr[i];
+        arr[i] = var;
     }
 }

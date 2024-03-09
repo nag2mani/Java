@@ -1,58 +1,39 @@
 package Sorting;
 
+
+
 public class QuickSort {
 
-    int partition(int arr[], int low, int high) {
-        // First element as pivot
-        int pivot = arr[low];
-        int st = low;
-        int end = high;
-        int k = high;
-        for (int i = high; i > low; i--) {
-            if (arr[i] > pivot)
-                swap(arr, i, k--);
+    //Swapping of two elements.
+    public static void Swap(int[] arr, int j, int i) {
+        int var = arr[j];
+        arr[j] = arr[i];
+        arr[i] = var;
+    }
+
+    //Quicksort
+    public static int[] quicksort(int[] arr, int s, int e) {
+        if (s >= e) {
+            return arr;
         }
-        swap(arr, low, k);
-
-        return k;
+        int partIndx = partition(arr, s, e);
+        quicksort(arr, s, partIndx - 1);
+        quicksort(arr, partIndx + 1, e);
+        return arr;
     }
 
-    public static void swap(int[] arr, int i, int j) {
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-    }
-
-    void quickSort(int arr[], int low, int high) {
-        if (low < high) {
-            int idx = partition(arr, low, high);
-            quickSort(arr, low, idx - 1);
-            quickSort(arr, idx + 1, high);
+    //partition function.
+    public static int partition(int[] arr, int s, int e) {
+        int pivot = arr[e];
+        int i = s - 1;
+        for (int j = s; j < e; j++) {
+            if (arr[j] < pivot) {
+                i++;
+                Swap(arr, i, j);
+            }
         }
-    }
-
-    void printArray(int arr[], int size)
-
-    {
-        int i;
-        for (i = 0; i < size; i++)
-            System.out.print(arr[i] + " ");
-        System.out.println();
-    }
-
-    public static void main(String args[]) {
-        int arr[] = { 7, 6, 10, 5, 9, 2, 1, 15, 7 };
-        int n = arr.length;
-
-        QuickSort ob = new QuickSort();
-
-        System.out.println("Unsorted array");
-        ob.printArray(arr, n);
-        ob.quickSort(arr, 0, n - 1);
-
-        System.out.println("Sorted array");
-
-        ob.printArray(arr, n);
+        Swap(arr, i + 1, e);
+        return i + 1;
     }
 }
 

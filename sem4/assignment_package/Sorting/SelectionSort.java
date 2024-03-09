@@ -1,57 +1,35 @@
 package Sorting;
 
-class SelectionSort {
-    public static void main(String[] args) {
-        int len = args.length;
-        int myArray[] = new int[len];
-        int[] sortedArray = new int[len];
 
-        System.out.print("Array before sorting: ");
-        for (int i = 0; i < len; i++) {
-            myArray[i] = Integer.parseInt(args[i]);
-            System.out.print(myArray[i] + " ");
+public class SelectionSort {
+
+    //selection sort algorithm.
+    public static int[] selection_sort(int[] arr){
+        for (int i = 0; i < arr.length; i++) {
+            int temp=arr[i];
+            int min_indx=findMinimum(arr,i);
+            if (arr[min_indx]<temp){
+                Swap(arr,i,min_indx);
+            }
         }
-
-        Sort s = new Sort();
-        sortedArray = s.SelectionSort(myArray);
-        System.out.print("\nArray after sorting: ");
-        for (int i = 0; i < len; i++) {
-            System.out.print(sortedArray[i] + " ");
-        }
-
-        System.out.println();
+        return arr;
     }
-}
 
-class Sort {
-    int[] SelectionSort(int[] a) {
-        int i, j, small;
-        int n = a.length;
-        int steps = 0;
-        System.out.println("\nSelection sort is starting....");
-        for (i = 0; i < n - 1; i++) {
-            small = i; // minimum element in unsorted array
-
-            for (j = i + 1; j < n; j++) {
-                if (a[j] < a[small]) {
-                    steps++;
-                    small = j;
-                }
-
-                // Swap the minimum element with the first element
-                int temp = a[small];
-                a[small] = a[i];
-                a[i] = temp;
+    // find minimum in an array.
+    public static int findMinimum(int[] arr, int i) {
+        int min=i;
+        for (int j = i; j < arr.length; j++) {
+            if (arr[j]<arr[min]){
+                min=j;
             }
-            System.out.print("\nAfter pass " + (i + 1) + " : ");
-
-            for (int k = 0; k < n; k++) {
-
-                System.out.print(a[k] + " ");
-            }
-
         }
-        System.out.print("Total number of steps: " + steps);
-        return a;
+        return min;
+    }
+
+    //swapping method.
+    public static void Swap(int[] arr, int j, int i) {
+        int var=arr[j];
+        arr[j]=arr[i];
+        arr[i]=var;
     }
 }
