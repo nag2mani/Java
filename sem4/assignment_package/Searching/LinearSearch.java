@@ -1,7 +1,7 @@
 package Searching;
 
 
-class LinearSearch {
+public class LinearSearch {
 
     //linear search
     public static int linear_search(int arr[], int N, int x) {

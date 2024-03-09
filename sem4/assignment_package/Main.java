@@ -25,12 +25,12 @@ public class Main {
 
             if (choose == 1) {
 
-                System.out.println("Enter numbers either in increasing order or decreasing order");
+                System.out.println("Enter size of array to Search :");
 
                 int size = scanner.nextInt();
 
                 int[] arr = new int[size];
-                
+
                 for (int i = 0; i < size; i++) {
                     System.out.println("Enter number to put in the array:");
                     int num = scanner.nextInt();
@@ -49,26 +49,30 @@ public class Main {
             } 
 
             else {
-                System.out.println("Not implimented yet");
-                // System.out
-                //         .println("you have chosen for the Linear search so now you can put numbers in array randomly");
-                // System.out.println();
-                // System.out.println("enter the size of the array:");
-                // int size = in.nextInt();
-                // int[] arr = new int[size];
-                // for (int i = 0; i < size; i++) {
-                //     System.out.println("enter the number to put into the array");
-                //     int num = in.nextInt();
-                //     arr[i] = num;
-                // }
-                // System.out.println("you have this array " + Arrays.toString(arr));
-                // System.out.println();
-                // System.out.println("Now enter the target to search for:");
-                // int target = in.nextInt();
-                // int indx = SeachingImplementation.LinearSearch(arr, target);
-                // System.out.println("the target is found at index " + indx);
+
+                System.out.println("Enter size of array to Search :");
+
+                int size = scanner.nextInt();
+
+                int[] arr = new int[size];
+
+                for (int i = 0; i < size; i++) {
+                    System.out.println("Enter number to put in the array:");
+                    int num = scanner.nextInt();
+                    arr[i] = num;
+                }
+
+                System.out.println("your Array : " + Arrays.toString(arr));
+
+                System.out.println("Enter target element :");
+                int target = scanner.nextInt();
+
+                int n = arr.length;
+                int indx = Searching.LinearSearch.linear_search(arr, n, target);
+
+                System.out.println("Your target element is at index " + indx);
             }
-            scanner.close();
+            // scanner.close();
         }
         // if (userinput == 2) {
         //     System.out.println("You have chosen for Sorting");
