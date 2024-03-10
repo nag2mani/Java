@@ -2,18 +2,15 @@
 // Date: 10th March 2024
 // Subject: Advance Java
 
-
-//My own package.
 import Stack.*;
 import Queue.*;
 import LinkedList.*;
 import Searching.*;
 import Sorting.*;
 
-
-//required utility.
 import java.util.Arrays;
 import java.util.Scanner;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -229,4 +226,3 @@ public class Main {
         scanner.close();
     }
 }
-
