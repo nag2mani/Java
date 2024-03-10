@@ -1,9 +1,10 @@
-package Data_Structures;
+package LinkedList;
 
 
 public class LinkedList {
+
     Node head;
-    class Node {
+    public class Node {
         int data;
         Node next;
 
@@ -13,26 +14,26 @@ public class LinkedList {
         }
     }
 
-    void insertNodeAtFirst(int data) {
+    public void insertNodeAtFirst(int data) {
         Node newNode = new Node(data);
         if (head == null) {
-            System.out.println("Adding node: " + newNode.data);
+            System.out.println("Added node: " + newNode.data);
 
             head = newNode;
         } else {
-            System.out.println("Adding node: " + newNode.data);
+            System.out.println("Added node: " + newNode.data);
             newNode.next = head;
             head = newNode;
         }
     }
 
-    void insertNodeAtLast(int data) {
+    public void insertNodeAtLast(int data) {
         Node newNode = new Node(data);
         if (head == null) {
-            System.out.println("Adding node: " + newNode.data);
+            System.out.println("Added node: " + newNode.data);
             head = newNode;
         } else {
-            System.out.println("Adding node: " + newNode.data);
+            System.out.println("Added node: " + newNode.data);
             Node currNode = head.next;
             Node node2ndLast = head;
             while (currNode != null) {
@@ -43,7 +44,7 @@ public class LinkedList {
         }
     }
 
-    void insertNodeAtPosition(int data, int pos) {
+    public void insertNodeAtPosition(int data, int pos) {
         Node newNode = new Node(data);
         if (pos < 0) {
             System.out.println("Invalid position to insert ");
@@ -70,7 +71,7 @@ public class LinkedList {
         }
     }
 
-    void deleteAtFirst() {
+    public void deleteAtFirst() {
         if (head == null) {
             System.out.println("The list is empty, can't delete anything");
         } else {
@@ -83,7 +84,7 @@ public class LinkedList {
         }
     }
 
-    void deleteAtLast() {
+    public void deleteAtLast() {
         if (head == null) {
             System.out.println("The list is empty, can't delete anything");
         } else {
@@ -104,7 +105,7 @@ public class LinkedList {
         }
     }
 
-    void deleteAtPosition(int pos) {
+    public void deleteAtPosition(int pos) {
         if (pos < 0) {
             System.out.println("Invalid position to delete ");
         } else {
@@ -127,7 +128,7 @@ public class LinkedList {
         }
     }
 
-    void showElements() {
+    public void showElements() {
         if (head == null) {
             System.out.println("The list is empty.");
         } else {
@@ -141,7 +142,7 @@ public class LinkedList {
         }
     }
 
-    int getSize() {
+    public int getSize() {
         Node currNode = head;
         int size = 0;
         while (currNode != null) {

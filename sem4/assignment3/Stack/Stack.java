@@ -1,4 +1,4 @@
-package Data_Structures;
+package Stack;
 
 public class Stack {
 
@@ -6,7 +6,7 @@ public class Stack {
     int arr[]; // Array to store the elements of the stack
     int top; // Index of the top element of the stack
 
-    Stack(int n) { // Constructor to create an empty stack with a specified size(n)
+    public Stack(int n) { // Constructor to create an empty stack with a specified size(n)
 
         this.n = n;
         this.arr = new int[n];

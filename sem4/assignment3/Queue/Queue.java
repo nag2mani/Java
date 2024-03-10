@@ -1,27 +1,31 @@
-package Data_Structures;
+package Queue;
 
 
 public class Queue {
 
-    int SIZE = 5;
-    int items[] = new int[SIZE];
-    int front, rear;
+    public int front, rear;
+    int n;
+    int items[];
 
-    Queue() {
+    public Queue(int n ) {
+        this.n = n;
+        this.items = new int[n];
         front = -1;
         rear = -1;
     }
 
+
     // check if the queue is full
-    boolean isFull() {
-        if (front == 0 && rear == SIZE - 1) {
+    public boolean isFull() {
+        if (front == 0 && rear == n - 1) {
             return true;
         }
         return false;
     }
 
+
     // check if the queue is empty
-    boolean isEmpty() {
+    public boolean isEmpty() {
         if (front == -1)
             return true;
         else
@@ -30,7 +34,7 @@ public class Queue {
 
 
     // insert elements to the queue
-    void enqueue(int element) {
+    public void enqueue(int element) {
         // if queue is full
         if (isFull()) {
             System.out.println("Queue is full");
@@ -42,13 +46,13 @@ public class Queue {
             rear++;
             // insert element at the rear
             items[rear] = element;
-            System.out.println("Insert " + element);
+            System.out.println("Inserted :" + element);
         }
     }
 
 
     // delete element from the queue
-    int dequeue() {
+    public int dequeue() {
         int element;
         // if queue is empty
         if (isEmpty()) {
@@ -72,7 +76,7 @@ public class Queue {
 
 
     // display element of the queue
-    void display() {
+    public void display() {
         int i;
         if (isEmpty()) {
             System.out.println("Empty Queue");
