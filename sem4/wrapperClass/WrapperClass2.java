@@ -5,6 +5,8 @@
 public class WrapperClass2 {
 
     public static void main(String args[]) {
+
+        //Defined variables.
         byte b = 10;
         short s = 20;
         int i = 30;
@@ -35,6 +37,10 @@ public class WrapperClass2 {
         System.out.println("Character object: " + charobj);
         System.out.println("Boolean object: " + boolobj);
 
+
+
+
+
         // Unboxing: Converting Objects to Primitives
         byte bytevalue = byteobj;
         short shortvalue = shortobj;
@@ -57,4 +63,5 @@ public class WrapperClass2 {
         System.out.println("char value: " + charvalue);
         System.out.println("boolean value: " + boolvalue);
     }
+
 }
