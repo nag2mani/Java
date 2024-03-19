@@ -24,11 +24,9 @@ class Movie implements Comparable<Movie> {
     public double getRating() {
         return rating;
     }
-
     public String getName() {
         return name;
     }
-
     public int getYear() {
         return year;
     }
@@ -44,7 +42,6 @@ class RatingCompare implements Comparator<Movie> {
             return 1;
         else
             return 0;
-
     }
 }
 
