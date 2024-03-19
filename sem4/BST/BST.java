@@ -46,7 +46,6 @@ public class BST {
         inorderTraverse(root.right);
     }
 
-
     public static boolean searchTree(Node root, int key) {
         if (root == null) {
             return false;
@@ -100,4 +99,6 @@ public class BST {
         System.out.println("Inorder traversal:");
         inorderTraverse(root);
     }
+
+    
 }
