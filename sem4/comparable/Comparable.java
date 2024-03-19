@@ -1,6 +1,6 @@
 
 // A Java program to demonstrate use of Comparable
-import java.io.*;
+// import java.io.*;
 import java.util.*;
 
 // A class 'Movie' that implements Comparable
@@ -33,6 +33,7 @@ class Movie implements Comparable<Movie> {
     public int getYear() {
         return year;
     }
+    
 }
 
 // Driver class

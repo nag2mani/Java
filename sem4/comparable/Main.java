@@ -1,5 +1,5 @@
 // A Java program to demonstrate Comparator interface
-import java.io.*;
+// package sem4.comparable;
 import java.util.*;
 
 // A class 'Movie' that implements Comparable
@@ -33,6 +33,7 @@ class Movie implements Comparable<Movie> {
         return year;
     }
 }
+
 
 // Class to compare Movies by ratings
 class RatingCompare implements Comparator<Movie> {
@@ -70,7 +71,6 @@ class Main {
         // (3) Print Sorted list
         System.out.println("Sorted by rating");
         RatingCompare ratingCompare = new RatingCompare();
-
         Collections.sort(list, ratingCompare);
         for (Movie movie : list)
             System.out.println(movie.getRating() + " "
