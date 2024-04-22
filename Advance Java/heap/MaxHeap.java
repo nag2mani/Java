@@ -76,6 +76,7 @@ public class MaxHeap {
             }
         }
 
+        //this is also called delete method.
         public int extractMax() {
             int max = Heap[1];
             Heap[1] = Heap[size--];
@@ -85,6 +86,12 @@ public class MaxHeap {
     }
 
     public static void main(String[] arg) {
+
+        // int c=MxHeap.size;
+        // for(int i=1;i<=c;i++) {
+        // System.out.print(maxHeap.extractMax()+" ");
+        // }
+
         MxHeap maxHeap = new MxHeap(10);
         maxHeap.insert(19);
         maxHeap.insert(4);
