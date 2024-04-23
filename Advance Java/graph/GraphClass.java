@@ -32,7 +32,6 @@ public class GraphClass {
     }
 
 
-
     public static void main(String[] args) {
 
         int V = 4;
@@ -40,16 +39,21 @@ public class GraphClass {
         
         createGraph(graph);
 
-        System.out.println(graph[0].get(0).src);
-        System.out.println(graph[0].get(0).dest);
+        // System.out.println(graph[0].get(0).src);
+        // System.out.println(graph[0].get(0).dest);
 
         // //here graph 0 has one edge but get(1) asking for 2nd edge.
         // System.out.println(graph[0].get(1).dest);
 
-        System.out.println(graph[1].get(0).src);
-        System.out.println(graph[1].get(0).dest);
-        System.out.println(graph[1].get(1).src);
-        System.out.println(graph[1].get(1).dest);
+        // System.out.println(graph[1].get(0).src);
+        // System.out.println(graph[1].get(0).dest);
+        // System.out.println(graph[1].get(1).src);
+        // System.out.println(graph[1].get(1).dest);
+
+        for(int i=0;i<graph[2].size();i++) {
+            Edge e = graph[2].get(i);
+            System.out.println(e.src+" "+e.dest);
+            }
     }
 
 }
