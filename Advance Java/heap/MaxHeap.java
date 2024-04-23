@@ -52,8 +52,8 @@ public class MaxHeap {
             }
         }
 
-        // When we insert in a heap, then we use heapifyup.
-        private void heapifyUp(int pos) {
+        // When we insert in a heap, then we use upHeapify.
+        private void upHeapify(int pos) {
             // Storing the element which is finding their correc position.
             int temp = Heap[pos];
             while (pos > 0 && temp > Heap[parent(pos)]) {
@@ -66,7 +66,7 @@ public class MaxHeap {
         public void insert(int element) {
             Heap[++size] = element;
             int current = size;
-            heapifyUp(current);
+            upHeapify(current);
         }
 
         public void print() {
@@ -89,18 +89,23 @@ public class MaxHeap {
 
         // int c=MxHeap.size;
         // for(int i=1;i<=c;i++) {
-        // System.out.print(maxHeap.extractMax()+" ");
+        // System.out.print(obj_max_heap.extractMax()+" ");
         // }
 
-        MxHeap maxHeap = new MxHeap(10);
-        maxHeap.insert(19);
-        maxHeap.insert(4);
-        maxHeap.insert(2);
-        maxHeap.insert(5);
-        maxHeap.insert(13);
-        maxHeap.insert(6);
-        maxHeap.insert(17);
-        maxHeap.print();
-        System.out.println("The max is " + maxHeap.extractMax());
+        MxHeap obj_max_heap = new MxHeap(10);
+        obj_max_heap.insert(19);
+        obj_max_heap.insert(4);
+        obj_max_heap.insert(2);
+        obj_max_heap.insert(5);
+        obj_max_heap.insert(13);
+        obj_max_heap.insert(100);
+        obj_max_heap.insert(6);
+        obj_max_heap.insert(17);
+        obj_max_heap.insert(0);
+        obj_max_heap.print();
+        System.out.println("The max is " + obj_max_heap.extractMax());
+        System.out.println("The next max is " + obj_max_heap.extractMax());
+        obj_max_heap.print();
+        
     }
 }
