@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class BFS2 {
     public static class Edge{
@@ -34,15 +36,31 @@ public class BFS2 {
     }
 
     public static void bfs(ArrayList<Edge> graph[], int V){
-        
+        Queue<Integer> q = new LinkedList<>();
+        boolean visited[] = new boolean[V]; //initialise with false.
+
+        q.add(0); //we start from the node 0.
+
+        while (! q.isEmpty()) {
+            int curr = q.remove();
+
+            if (visited[curr] == false){
+                System.out.println(curr);
+                visited[curr] = true;
+
+                for(int i=0; i<graph[curr].size(); i++){
+                    Edge e = graph[curr].get(i);
+                    q.add(e.des);
+                }
+            }
+        }
     }
-
-
 
     public static void main(String[] args) {
         int V = 5;
-        ArrayList<Edge> graph[] = new ArrayList[5];
+        ArrayList<Edge> graph[] = new ArrayList[V];
         createGraph(graph);
         bfs(graph, V);
+        System.out.println();
     }
 }
