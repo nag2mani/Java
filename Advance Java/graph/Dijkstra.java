@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class DJ6V3 {
+public class Dijkstra {
     public static class Edge {
         int src;
         int nbr;
