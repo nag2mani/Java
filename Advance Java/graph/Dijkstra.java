@@ -43,19 +43,24 @@ public class Dijkstra {
     }
 
     public static void DJ(ArrayList<Edge> graph[], int s, int V) {
-        boolean vis[] = new boolean[V];
+        boolean visited[] = new boolean[V];
         PriorityQueue<Pair> pq = new PriorityQueue<Pair>();
+
         pq.add(new Pair(s, 0));
+
         while (!pq.isEmpty()) {
+
             Pair topEle = pq.remove();
-            if (vis[topEle.vertex] == true) {
+
+            if (visited[topEle.vertex] == true) {
                 continue;
             }
-            vis[topEle.vertex] = true;
-            System.out.println("Vertex: " + topEle.vertex +
-                    "\tWeight: " + topEle.wsf);
+            visited[topEle.vertex] = true;
+
+            System.out.println("Vertex: " + topEle.vertex +"\tWeight: " + topEle.wsf);
+
             for (Edge e : graph[topEle.vertex]) {
-                if (vis[e.nbr] == false) {
+                if (visited[e.nbr] == false) {
                     pq.add(new Pair(e.nbr, topEle.wsf + e.wt));
                     // System.out.println(e.nbr+" "+(topEle.wsf+e.wt));
                 }
@@ -67,6 +72,8 @@ public class Dijkstra {
         int V = 6;
         ArrayList<Edge> graph[] = new ArrayList[V];
         createGraph(graph);
+        System.out.println("From Vertex 0 to :");
         DJ(graph, 0, V);
     }
 }
+
