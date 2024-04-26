@@ -1,4 +1,5 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.PriorityQueue;
 
 public class Dijkstra {
     public static class Edge {
@@ -34,7 +35,6 @@ public class Dijkstra {
         Pair(int vertex, int wsf) {
             this.vertex = vertex;
             this.wsf = wsf;
-
         }
 
         public int compareTo(Pair o) {
