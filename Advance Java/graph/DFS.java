@@ -97,8 +97,8 @@ public class DFS {
     }
 
     public static void dfs(ArrayList<Edge> graph[], int V) {
-        boolean visited[] = new boolean[V];
         Stack<Integer> stack = new Stack<>();
+        boolean visited[] = new boolean[V];
         
         // Start DFS from vertex 0
         stack.push(0);
@@ -106,7 +106,7 @@ public class DFS {
         while (!stack.isEmpty()) {
             int curr = stack.pop();
             
-            if (!visited[curr]) {
+            if (visited[curr]==false) {
                 visited[curr] = true;
                 System.out.print(curr + " ");
                 
