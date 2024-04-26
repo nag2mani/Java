@@ -107,15 +107,14 @@ public class DFS {
             int curr = stack.pop();
             
             if (visited[curr]==false) {
-                visited[curr] = true;
                 System.out.print(curr + " ");
+                visited[curr] = true;
                 
                 // Push unvisited neighbors onto the stack
-                for (Edge e : graph[curr]) {
-                    if (!visited[e.dst]) {
+                for (int i = 0; i < graph[curr].size(); i++) {
+                    Edge e = graph[curr].get(i);
                         stack.push(e.dst);
-                    }
-                }
+                }                
             }
         }
     }

@@ -75,7 +75,6 @@ public class BFS1 {
                 for (int i = 0; i < graph[curr].size(); i++) {
                     Edge e = graph[curr].get(i);
                     q.add(e.dst);
-
                 }
             }
         }
