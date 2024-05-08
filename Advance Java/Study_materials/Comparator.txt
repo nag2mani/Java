@@ -1,0 +1,57 @@
+package MyCollection;
+
+import java.util.*;
+
+class Emp{
+	int age;
+	int sal;
+	
+	Emp(int age, int sal){
+		this.age=age;
+		this.sal=sal;
+	}
+}
+
+class AgeCompartor implements Comparator<Emp>{
+
+	public int compare(Emp o1, Emp o2) {
+		return o1.age-o2.age;
+	}
+}
+
+
+class SalaryCompartor implements Comparator<Emp>{
+
+	public int compare(Emp o1, Emp o2) {
+		// TODO Auto-generated method stub
+		return o1.sal-o2.sal;
+	}
+}
+
+public class Ranjan {
+	public static void main(String[] args) {
+		ArrayList<Emp> al = new ArrayList<Emp>();
+		al.add(new Emp(24,50000));
+		al.add(new Emp(21,60000));
+		al.add(new Emp(25,40000));
+		al.add(new Emp(23,55000));
+		al.add(new Emp(20,100000));
+		
+		AgeCompartor ac = new AgeCompartor();
+		
+		SalaryCompartor sc = new SalaryCompartor();
+		
+		Collections.sort(al,ac);
+		for(Emp e:al) {
+			System.out.println(e.age+" "+e.sal);
+		}
+		System.out.println();
+		Collections.sort(al,sc);
+		for(Emp e:al) {
+			System.out.println(e.age+" "+e.sal);
+		}
+	}
+}
+
+
+

@@ -1,0 +1,39 @@
+package MyCollection;
+
+import java.util.*;
+
+class Employee2 implements Comparable<Employee2>{
+	int id;
+	int salary;
+	int age;
+	
+	Employee2(int id, int salary){
+		this.id=id;
+		this.salary=salary;
+	}
+
+	@Override
+	public int compareTo(Employee2 o) {
+		//System.out.println(this+" "+o);
+		return this.id - o.id;		
+	}
+
+}
+
+
+public class ComparableComparator {
+	public static void main(String[] args) {
+		ArrayList<Employee2> list = new ArrayList<>();
+		
+		list.add(new Employee2(101,50000));
+		list.add(new Employee2(105,60000));
+		list.add(new Employee2(102,55000));
+		list.add(new Employee2(104,45000));
+		list.add(new Employee2(103,70000));
+		Collections.sort(list);
+		
+		for(Employee2 emp: list) {
+			System.out.println(emp.id+" "+emp.salary);
+		}
+	}
+}
