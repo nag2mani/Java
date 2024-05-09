@@ -1,0 +1,3 @@
+Hello, PrintWriter!
+This is an example of writing text to a file using PrintWriter.
+It's easy to use PrintWriter for writing formatted text.
